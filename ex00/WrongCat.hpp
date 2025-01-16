@@ -1,61 +1,61 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bde-wits <bde-wits@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/14 23:38:35 by bde-wits          #+#    #+#             */
-/*   Updated: 2025/01/15 05:08:49 by bde-wits         ###   ########.fr       */
+/*   Created: 2025/01/15 04:33:40 by bde-wits          #+#    #+#             */
+/*   Updated: 2025/01/15 05:09:32 by bde-wits         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_HPP
-#define	CAT_HPP
+#ifndef WRONGCAT_HPP
+#define	WRONGCAT_HPP
 
-#include "Animal.hpp"
+#include "WrongAnimal.hpp"
 
-class Cat : public Animal
+class WrongCat : public WrongAnimal
 {
 	public:
-		Cat();
-		Cat(std::string name);
-		Cat(const Animal &cpy);
-		~Cat();
-		Cat	&operator=(const Cat cpy);
+		WrongCat();
+		WrongCat(std::string name);
+		WrongCat(const WrongAnimal &cpy);
+		~WrongCat();
+		WrongCat	&operator=(const WrongCat cpy);
 		void	makeSound() const;
 	private:
 };
 
-void	Cat::makeSound() const
-{
-	std::cout << "miaou miaou mia mia ou miaou" << std::endl;
-	std::cout << "aka asoutaie pendant l'exam final" << std::endl;
-}
-
-Cat&	Cat::operator=(const Cat cpy)
+WrongCat&	WrongCat::operator=(const WrongCat cpy)
 {
 	std::cout << "Copy assignment operator called" << std::endl;
 	this->type = cpy.type;
 	return (*this);
 }
 
-Cat::Cat(const Animal &cpy)
+WrongCat::WrongCat(const WrongAnimal &cpy)
 {
 	std::cout << "copy constructor called" << std::endl;
 	*this = cpy;
 }
 
-Cat::Cat(std::string name) : Animal(name)
+void	WrongCat::makeSound() const
+{
+	std::cout << "Wrong meow meow meow" << std::endl;
+	std::cout << "aka asoutaie pendant l'exam final" << std::endl;
+}
+
+WrongCat::WrongCat(std::string name) : WrongAnimal (name)
 {
 }
 
-Cat::Cat() : Animal("Cat")
+WrongCat::WrongCat() : WrongAnimal("WrongCat")
 {
-	// this->type = "Cat";
+	// this->type = "WrongCat";
 }
 
-Cat::~Cat()
+WrongCat::~WrongCat()
 {
 }
 

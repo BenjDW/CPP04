@@ -6,7 +6,7 @@
 /*   By: bde-wits <bde-wits@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 23:26:44 by bde-wits          #+#    #+#             */
-/*   Updated: 2025/01/15 00:27:30 by bde-wits         ###   ########.fr       */
+/*   Updated: 2025/01/15 04:39:01 by bde-wits         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,15 +39,21 @@ class Animal
 	public:
 		Animal();
 		Animal(std::string type);
-		// Animal(const Animal& cpy);
-		~Animal();
-		// Animal	&operator=(const Animal cpy);
-		virtual void	makeSound();
+		Animal(const Animal& cpy);
+		virtual ~Animal();
+		Animal	&operator=(const Animal cpy);
+		virtual std::string	getType() const;
+		virtual void	makeSound() const;
 	protected:
 		std::string	type;
 };
 
-void	Animal::makeSound()
+std::string	Animal::getType() const
+{
+	return (this->type);
+}
+
+void	Animal::makeSound() const
 {
 	std::cout << "bzz bzz bzzzz bzzzz bzz bzz bzzzz bzzzz bzzz bzz bzzz bzzzz" << std::endl;
 }
@@ -60,6 +66,19 @@ Animal::Animal()
 Animal::Animal(std::string typ)
 {
 	this->type = typ;
+}
+
+Animal&	Animal::operator=(const Animal cpy)
+{
+	std::cout << "Copy assignment operator called" << std::endl;
+	this->type = cpy.type;
+	return (*this);
+}
+
+Animal::Animal(const Animal &cpy)
+{
+	std::cout << "copy constructor called" << std::endl;
+	*this = cpy;
 }
 
 Animal::~Animal()
