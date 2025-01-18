@@ -6,7 +6,7 @@
 /*   By: bde-wits <bde-wits@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 05:17:17 by bde-wits          #+#    #+#             */
-/*   Updated: 2025/01/16 12:14:00 by bde-wits         ###   ########.fr       */
+/*   Updated: 2025/01/18 02:04:05 by bde-wits         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ class Brain
 {
 	public:
 		Brain();
-		// Brain(/* args */);
+		Brain(std::string name);
 		Brain(const Brain &cpy);
 		~Brain();
 		Brain	&operator=(const Brain cpy);
@@ -51,8 +51,33 @@ Brain::Brain()
 		ideas[i] = "kitty";
 }
 
+Brain::Brain(std::string name)
+{
+	for (int i = 0; i < 100; i++)
+		ideas[i] = name;
+}
+
+Brain::Brain(const Brain &cpy)
+{
+	// *this = cpy;
+	for (int i = 0; i < 100; i++)
+		ideas[i] = cpy.ideas[i];
+}
+
+Brain& Brain::operator=(const Brain cpy)
+{
+    if (this != &cpy)
+    {
+        for (int i = 0; i < 100; i++)
+            ideas[i] = cpy.ideas[i];
+    }
+    return *this;
+}
+
 Brain::~Brain()
 {
+	std::cout << "destroy brain class" << std::endl;
+	// delete(this);
 }
 
 #endif

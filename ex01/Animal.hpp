@@ -6,7 +6,7 @@
 /*   By: bde-wits <bde-wits@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 23:26:44 by bde-wits          #+#    #+#             */
-/*   Updated: 2025/01/15 04:39:01 by bde-wits         ###   ########.fr       */
+/*   Updated: 2025/01/18 03:31:47 by bde-wits         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,8 +77,8 @@ Animal&	Animal::operator=(const Animal cpy)
 
 Animal::Animal(const Animal &cpy)
 {
-	std::cout << "copy constructor called" << std::endl;
-	*this = cpy;
+	std::cout << "copy ANIMAL constructor called" << std::endl;
+	this->type = cpy.type;
 }
 
 Animal::~Animal()

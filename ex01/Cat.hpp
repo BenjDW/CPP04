@@ -6,7 +6,7 @@
 /*   By: bde-wits <bde-wits@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 23:38:35 by bde-wits          #+#    #+#             */
-/*   Updated: 2025/01/16 12:14:09 by bde-wits         ###   ########.fr       */
+/*   Updated: 2025/01/18 03:35:29 by bde-wits         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,19 @@ class Cat : public Animal
 		Cat(std::string name);
 		Cat(const Cat &cpy);
 		~Cat();
-		Cat	&operator=(const Cat cpy);
+		Cat	&operator=(const Cat &cpy);
+		std::string	getBrainIdea(int index) const;
 		void	makeSound() const;
 	private:
 		Brain*	tekno_sar;
 };
+
+std::string Cat::getBrainIdea(int index) const
+{
+    if (tekno_sar && index < 100) // Vérifie que tekno_sar n'est pas nullptr et que l'index est valide
+        return (tekno_sar->ideas[index]);
+    return "Invalid index or Brain is not initialized";
+}
 
 void	Cat::makeSound() const
 {
@@ -35,19 +43,21 @@ void	Cat::makeSound() const
 	std::cout << "aka asoutaie pendant l'exam final" << std::endl;
 }
 
-Cat&	Cat::operator=(const Cat cpy)
+Cat	&Cat::operator=(const Cat &cpy)
 {
 	std::cout << "Copy assignment operator called" << std::endl;
 	this->type = cpy.type;
-	this->tekno_sar = cpy.tekno_sar;
+	if (this->tekno_sar)
+		delete(this->tekno_sar);
+	// this->tekno_sar = cpy.tekno_sar;
+	tekno_sar = new Brain();
 	return (*this);
 }
 
-Cat::Cat(const Cat &cpy) : Animal(cpy)
+Cat::Cat(const Cat &cpy) : Animal("Cat")
 {
-	std::cout << "copy constructor called" << std::endl;
-	this->tekno_sar = new Brain(&cpy.tekno_sar);
-	*this = cpy;
+	std::cout << "copy CAT constructor called" << std::endl;
+	this->tekno_sar = new Brain(*cpy.tekno_sar);
 }
 
 Cat::Cat(std::string name) : Animal(name)
