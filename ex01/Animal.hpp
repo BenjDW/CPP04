@@ -6,7 +6,7 @@
 /*   By: bde-wits <bde-wits@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 23:26:44 by bde-wits          #+#    #+#             */
-/*   Updated: 2025/01/18 03:31:47 by bde-wits         ###   ########.fr       */
+/*   Updated: 2025/01/18 08:08:54 by bde-wits         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,41 +48,41 @@ class Animal
 		std::string	type;
 };
 
-std::string	Animal::getType() const
-{
-	return (this->type);
-}
+// std::string	Animal::getType() const
+// {
+// 	return (this->type);
+// }
 
-void	Animal::makeSound() const
-{
-	std::cout << "bzz bzz bzzzz bzzzz bzz bzz bzzzz bzzzz bzzz bzz bzzz bzzzz" << std::endl;
-}
+// void	Animal::makeSound() const
+// {
+// 	std::cout << "bzz bzz bzzzz bzzzz bzz bzz bzzzz bzzzz bzzz bzz bzzz bzzzz" << std::endl;
+// }
 
-Animal::Animal()
-{
-	this->type = "petit scarabé";
-}
+// Animal::Animal()
+// {
+// 	this->type = "petit scarabé";
+// }
 
-Animal::Animal(std::string typ)
-{
-	this->type = typ;
-}
+// Animal::Animal(std::string typ)
+// {
+// 	this->type = typ;
+// }
 
-Animal&	Animal::operator=(const Animal cpy)
-{
-	std::cout << "Copy assignment operator called" << std::endl;
-	this->type = cpy.type;
-	return (*this);
-}
+// Animal&	Animal::operator=(const Animal cpy)
+// {
+// 	std::cout << "Copy assignment operator called" << std::endl;
+// 	this->type = cpy.type;
+// 	return (*this);
+// }
 
-Animal::Animal(const Animal &cpy)
-{
-	std::cout << "copy ANIMAL constructor called" << std::endl;
-	this->type = cpy.type;
-}
+// Animal::Animal(const Animal &cpy)
+// {
+// 	std::cout << "copy ANIMAL constructor called" << std::endl;
+// 	this->type = cpy.type;
+// }
 
-Animal::~Animal()
-{
-}
+// Animal::~Animal()
+// {
+// }
 
 #endif

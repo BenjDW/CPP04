@@ -6,7 +6,7 @@
 /*   By: bde-wits <bde-wits@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 04:30:37 by bde-wits          #+#    #+#             */
-/*   Updated: 2025/01/15 04:53:33 by bde-wits         ###   ########.fr       */
+/*   Updated: 2025/01/18 08:18:14 by bde-wits         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,41 +32,41 @@ class WrongAnimal
 		std::string	type;
 };
 
-std::string	WrongAnimal::getType() const
-{
-	return (this->type);
-}
+// std::string	WrongAnimal::getType() const
+// {
+// 	return (this->type);
+// }
 
-void	WrongAnimal::makeSound() const
-{
-	std::cout << "is magic , uuuhhh uuuhhh" << std::endl;
-}
+// void	WrongAnimal::makeSound() const
+// {
+// 	std::cout << "is magic , uuuhhh uuuhhh" << std::endl;
+// }
 
-WrongAnimal::WrongAnimal()
-{
-	this->type = "petit pony";
-}
+// WrongAnimal::WrongAnimal()
+// {
+// 	this->type = "petit pony";
+// }
 
-WrongAnimal::WrongAnimal(std::string typ)
-{
-	this->type = typ;
-}
+// WrongAnimal::WrongAnimal(std::string typ)
+// {
+// 	this->type = typ;
+// }
 
-WrongAnimal&	WrongAnimal::operator=(const WrongAnimal cpy)
-{
-	std::cout << "Copy assignment operator called" << std::endl;
-	this->type = cpy.type;
-	return (*this);
-}
+// WrongAnimal&	WrongAnimal::operator=(const WrongAnimal cpy)
+// {
+// 	std::cout << "Copy assignment operator called" << std::endl;
+// 	this->type = cpy.type;
+// 	return (*this);
+// }
 
-WrongAnimal::WrongAnimal(const WrongAnimal &cpy)
-{
-	std::cout << "copy constructor called" << std::endl;
-	*this = cpy;
-}
+// WrongAnimal::WrongAnimal(const WrongAnimal &cpy)
+// {
+// 	std::cout << "copy constructor called" << std::endl;
+// 	*this = cpy;
+// }
 
-WrongAnimal::~WrongAnimal()
-{
-}
+// WrongAnimal::~WrongAnimal()
+// {
+// }
 
 #endif

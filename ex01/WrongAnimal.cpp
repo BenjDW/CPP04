@@ -1,50 +1,50 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.cpp                                         :+:      :+:    :+:   */
+/*   WrongAnimal.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bde-wits <bde-wits@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/15 04:27:10 by bde-wits          #+#    #+#             */
-/*   Updated: 2025/01/18 08:09:13 by bde-wits         ###   ########.fr       */
+/*   Created: 2025/01/18 08:17:15 by bde-wits          #+#    #+#             */
+/*   Updated: 2025/01/18 08:18:06 by bde-wits         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "WrongAnimal.hpp"
 
-std::string	Animal::getType() const
+std::string	WrongAnimal::getType() const
 {
 	return (this->type);
 }
 
-void	Animal::makeSound() const
+void	WrongAnimal::makeSound() const
 {
-	std::cout << "bzz bzz bzzzz bzzzz bzz bzz bzzzz bzzzz bzzz bzz bzzz bzzzz" << std::endl;
+	std::cout << "is magic , uuuhhh uuuhhh" << std::endl;
 }
 
-Animal::Animal()
+WrongAnimal::WrongAnimal()
 {
-	this->type = "petit scarabé";
+	this->type = "petit pony";
 }
 
-Animal::Animal(std::string typ)
+WrongAnimal::WrongAnimal(std::string typ)
 {
 	this->type = typ;
 }
 
-Animal&	Animal::operator=(const Animal cpy)
+WrongAnimal&	WrongAnimal::operator=(const WrongAnimal cpy)
 {
 	std::cout << "Copy assignment operator called" << std::endl;
 	this->type = cpy.type;
 	return (*this);
 }
 
-Animal::Animal(const Animal &cpy)
+WrongAnimal::WrongAnimal(const WrongAnimal &cpy)
 {
-	std::cout << "copy ANIMAL constructor called" << std::endl;
-	this->type = cpy.type;
+	std::cout << "copy constructor called" << std::endl;
+	*this = cpy;
 }
 
-Animal::~Animal()
+WrongAnimal::~WrongAnimal()
 {
 }
