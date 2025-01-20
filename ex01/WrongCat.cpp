@@ -6,7 +6,7 @@
 /*   By: bde-wits <bde-wits@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/18 08:18:33 by bde-wits          #+#    #+#             */
-/*   Updated: 2025/01/18 08:23:31 by bde-wits         ###   ########.fr       */
+/*   Updated: 2025/01/20 05:45:28 by bde-wits         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,6 @@ WrongCat::WrongCat(std::string name) : WrongAnimal (name)
 
 WrongCat::WrongCat() : WrongAnimal("WrongCat")
 {
-	// this->type = "WrongCat";
 }
 
 WrongCat::~WrongCat()

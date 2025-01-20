@@ -6,7 +6,7 @@
 /*   By: bde-wits <bde-wits@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/18 08:09:49 by bde-wits          #+#    #+#             */
-/*   Updated: 2025/01/18 08:10:19 by bde-wits         ###   ########.fr       */
+/*   Updated: 2025/01/20 05:41:40 by bde-wits         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ Cat	&Cat::operator=(const Cat &cpy)
 	this->type = cpy.type;
 	if (this->tekno_sar)
 		delete(this->tekno_sar);
-	// this->tekno_sar = cpy.tekno_sar;
 	tekno_sar = new Brain();
 	return (*this);
 }

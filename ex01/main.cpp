@@ -6,7 +6,7 @@
 /*   By: bde-wits <bde-wits@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 00:39:31 by bde-wits          #+#    #+#             */
-/*   Updated: 2025/01/18 05:29:04 by bde-wits         ###   ########.fr       */
+/*   Updated: 2025/01/20 05:42:44 by bde-wits         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,22 +16,6 @@
 #include "Cat.hpp"
 #include "Dog.hpp"
 #include "Brain.hpp"
-
-// int main()
-// {
-// 	const Animal* meta = new Animal();
-// 	const Animal* j = new Dog();
-// 	const Animal* i = new Cat();
-// 	std::cout << j->getType() << " " << std::endl;
-// 	std::cout << i->getType() << " " << std::endl;
-// 	i->makeSound(); //will output the cat sound!
-// 	j->makeSound();
-// 	meta->makeSound();
-
-// 	return 0;
-// }
-
-// 
 
 int main()
 {

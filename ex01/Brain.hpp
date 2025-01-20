@@ -6,21 +6,9 @@
 /*   By: bde-wits <bde-wits@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 05:17:17 by bde-wits          #+#    #+#             */
-/*   Updated: 2025/01/18 08:11:50 by bde-wits         ###   ########.fr       */
+/*   Updated: 2025/01/20 05:41:58 by bde-wits         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-// Implémentez une classe Brain (cerveau) contenant un tableau de 100 std::string
-// appelé ideas (idées).
-
-// Ainsi, les classes Dog et Cat auront un attribut privé Brain*.
-// À la construction, les classes Dog et Cat créeront leur Brain avec new Brain();
-// À la destruction, les classes Dog et Cat devront delete leur Brain.
-// Dans votre fonction main, créez et remplissez un tableau d’objets Animal dont la
-// moitié est composée d’objets Dog et l’autre moitié d’objets Cat. À la fin de l’exécution
-// du programme, parcourez ce tableau afin de delete chaque Animal. Vous devez delete
-// directement les chiens et les chats en tant qu’Animal. Les destructeurs correspondants
-// doivent être appelés dans le bon ordre.
 
 #ifndef BRAIN_HPP
 #define BRAIN_HPP
@@ -42,42 +30,5 @@ class Brain
 	private:
 
 };
-
-// Brain::Brain()
-// {
-// 	for (int i = 0; i < 50; i++)
-//         ideas[i] = "Doggo";
-// 	for (int i = 50; i < 100; i++)
-// 		ideas[i] = "kitty";
-// }
-
-// Brain::Brain(std::string name)
-// {
-// 	for (int i = 0; i < 100; i++)
-// 		ideas[i] = name;
-// }
-
-// Brain::Brain(const Brain &cpy)
-// {
-// 	// *this = cpy;
-// 	for (int i = 0; i < 100; i++)
-// 		ideas[i] = cpy.ideas[i];
-// }
-
-// Brain& Brain::operator=(const Brain cpy)
-// {
-//     if (this != &cpy)
-//     {
-//         for (int i = 0; i < 100; i++)
-//             ideas[i] = cpy.ideas[i];
-//     }
-//     return *this;
-// }
-
-// Brain::~Brain()
-// {
-// 	std::cout << "destroy brain class" << std::endl;
-// 	// delete(this);
-// }
 
 #endif
